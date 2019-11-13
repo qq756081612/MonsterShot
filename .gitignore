@@ -4,4 +4,5 @@ Packages
 obj
 Assembly-CSharp.csproj
 Assembly-CSharp-Editor.csproj
+Temp
 MonsterShot.sln
