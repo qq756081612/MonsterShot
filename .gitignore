@@ -2,3 +2,6 @@ Library
 Logs
 Packages
 obj
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+MonsterShot.sln
