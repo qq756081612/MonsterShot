@@ -6,3 +6,7 @@ Assembly-CSharp.csproj
 Assembly-CSharp-Editor.csproj
 Temp
 MonsterShot.sln
+.vs
+*.csproj
+Assembly-CSharp.csproj
+*.ide

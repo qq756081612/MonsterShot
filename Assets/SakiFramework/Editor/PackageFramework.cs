@@ -7,25 +7,21 @@ namespace SakiFramework
 {
     public class PackageFramework
     {
-        [MenuItem("SakiFramework/一键打包框架")]
+        [MenuItem("SakiFramework/一键打包框架 %e", false,1)]
         private static void PackageSakiFramework()
         {
             string filePath = "Assets/SakiFramework";
-            string fileName = string.Format("SakiFramework_{0}.unitypacakge", DateTime.Now.ToString("yyyy_MM_dd"));
+            string fileName = string.Format("SakiFramework_{0}.unitypacakge", DateTime.Now.ToString("yyyy_MM_dd_hh_mm"));
 
-            AssetDatabase.ExportPackage(filePath,fileName,ExportPackageOptions.Recurse);
+            PackageAssetsOpenFilePath(filePath, fileName);
 
-            // \../ 获取上级目录 要加转义字符
+            EditorUtility.DisplayDialog("操作成功", "一键打包框架完成","确定");
+        }
+
+        public static void PackageAssetsOpenFilePath(string filePath, string fileName)
+        {
+            AssetDatabase.ExportPackage(filePath, fileName, ExportPackageOptions.Recurse);
             Application.OpenURL("file:///" + Application.dataPath + "\\../");
-
-            //还可以写成这样 注意这两种写法的区别 用API会自动添加'\'且无需转义
-            //Application.OpenURL("file:///" + Path.Combine(Application.dataPath, "../"));
-
-            //拷贝到剪切板
-            //GUIUtility.systemCopyBuffer = fileName;
-
-            //执行路径中的MenuItem方法
-            //EditorApplication.ExecuteMenuItem("")
         }
     }
 }
