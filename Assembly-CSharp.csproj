@@ -140,6 +140,9 @@
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+    <Compile Include="Assets\SakiFramework\UIManager\UIItem.cs" />
+    <Compile Include="Assets\SakiFramework\UIManager\UIManager.cs" />
+    <Compile Include="Assets\SakiFramework\UIManager\UIViewBase.cs" />
     <Compile Include="Assets\SakiFramework\Utiliy\EventDispatcher.cs" />
     <Compile Include="Assets\SakiFramework\Utiliy\TimerManager.cs" />
     <Compile Include="Assets\SakiFramework\Utiliy\Tools.cs" />
