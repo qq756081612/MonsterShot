@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIViewBase
+public interface IUIView
+{
+
+}
+
+public class UIView:IUIView
 {
     // Start is called before the first frame update
     void Start()

@@ -23,6 +23,13 @@ namespace SakiFramework
             AssetDatabase.ExportPackage(filePath, fileName, ExportPackageOptions.Recurse);
             Application.OpenURL("file:///" + Application.dataPath + "\\../");
         }
+
+        [MenuItem("SakiFramework/临时测试方法 %t", false, 999)]
+        private static void TempTestFunc()
+        {
+            DebugMsg.LogError("666666666666");
+            Debuger.LogError("666666666666");
+        }
     }
 }
 

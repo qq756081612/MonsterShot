@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IUIItem
+//客户端入口 游戏的主循环
+public class MainManager : MonoBehaviour
 {
+    void Awake()
+    {
 
-}
-public class UIItem:IUIItem
-{
-    // Start is called before the first frame update
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
