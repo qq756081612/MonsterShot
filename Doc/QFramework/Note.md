@@ -19,3 +19,6 @@ EditorApplication.ExecuteMenuItem("")
 
 ###6.拷贝到剪切板
 GUIUtility.systemCopyBuffer = fileName;
+
+###7. PureMVC官网文档地址
+http://puremvc.org/docs/PureMVC_IIBP_Chinese.pdf
