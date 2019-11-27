@@ -42,8 +42,6 @@ namespace SakiFramework
             {
                 if (LoadView<T>(uiName))
                 {
-                    Debuger.LogError(uiDic.ContainsKey(uiName).ToString());
-
                     curPanel = uiDic[uiName];
                 }
                 else
@@ -73,6 +71,34 @@ namespace SakiFramework
                 UIViewBase prePanel = uiStack.Peek();
 
                 prePanel.OnEnable();
+            }
+        }
+
+        public void HideAllView()
+        {
+            foreach (var view in uiDic)
+            {
+                view.Value.OnDestory();
+            }
+
+            uiDic.Clear();
+            uiStack.Clear();
+
+            //暂时写在这
+            Resources.UnloadUnusedAssets();
+            GC.Collect();
+        }
+
+        //临时测试方法 以后应该被消息系统取代
+        public UIViewBase GetView(string uiName)
+        {
+            if (uiDic.ContainsKey(uiName))
+            {
+                return uiDic[uiName];
+            }
+            else
+            {
+                return null;
             }
         }
 

@@ -15,17 +15,23 @@ public class SettingView : UIViewBase
         continueBtn = GetChild<Button>("continueBtn");
         backBtn = GetChild<Button>("backBtn");
         closeBtn = GetChild<Button>("closeBtn");
+
+        backBtn.onClick.AddListener(OnBackBtnClick);
+        closeBtn.onClick.AddListener(OnCloseBtnClick);
+        continueBtn.onClick.AddListener(OnCloseBtnClick);
     }
 
     public void OnCloseBtnClick()
     {
         //关闭页面
         //解除暂停
+        UIManager.GetInstance().HideView();
     }
 
     public void OnBackBtnClick()
     {
         //返回start scene
+        LevelManager.GetInstance().LoadScene("Main");
     }
 
     public override string GetResPath()

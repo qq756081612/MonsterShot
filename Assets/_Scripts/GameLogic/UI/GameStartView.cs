@@ -21,6 +21,6 @@ public class GameStartView : UIViewBase
 
     private void OnStartBtnClick()
     {
-        Debug.Log("OnStartBtnClick");
+        LevelManager.GetInstance().LoadScene("Battle");
     }
 }

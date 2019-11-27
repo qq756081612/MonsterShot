@@ -83,7 +83,7 @@ namespace SakiFramework
 
         public virtual void OnDestory()
         {
-
+            GameObject.Destroy(uiRoot);
         }
 
         #endregion

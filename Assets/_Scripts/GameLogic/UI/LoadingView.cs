@@ -17,4 +17,9 @@ public class LoadingView : UIViewBase
     {
         processImg = UIRoot.transform.Find("Content").GetComponent<Image>();
     }
+
+    public void UpdataProgress(float progress)
+    {
+        processImg.fillAmount = progress;
+    }
 }
