@@ -23,16 +23,38 @@ public class MainManager : MonoBehaviour
         //ApplicationFacade.GetInstance().SendNotification(EventName.GameStart,);
 
         UIManager.GetInstance().Init();
-        UIManager.GetInstance().ShowView<GameStartView>("GameStartView");
+        LevelManager.GetInstance().Init();
     }
 
     void Start()
     {
-        
+        StartCoroutine(Test());
+    }
+
+    IEnumerator Test()
+    {
+        Debug.Log("Test");
+
+        //while (true)
+        //{
+        //    Debug.Log("Test");
+        //    yield return null;
+        //}
+        yield return null;
+    }
+
+    private void FixedUpdate()
+    {
+        //Debug.Log("FixedUpdate");
+    }
+
+    private void LateUpdate()
+    {
+        //Debug.Log("LateUpdate");
     }
 
     void Update()
     {
-        
+        //Debug.Log("Update");
     }
 }

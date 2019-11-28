@@ -76,6 +76,8 @@ namespace SakiFramework
 
         public void HideAllView()
         {
+            //Debuger.LogError("???");
+
             foreach (var view in uiDic)
             {
                 view.Value.OnDestory();
@@ -85,8 +87,8 @@ namespace SakiFramework
             uiStack.Clear();
 
             //暂时写在这
-            Resources.UnloadUnusedAssets();
-            GC.Collect();
+            //Resources.UnloadUnusedAssets();
+            //GC.Collect();
         }
 
         //临时测试方法 以后应该被消息系统取代

@@ -31,7 +31,7 @@ public class SettingView : UIViewBase
     public void OnBackBtnClick()
     {
         //返回start scene
-        LevelManager.GetInstance().LoadScene("Main");
+        LevelManager.GetInstance().LoadScene("Start");
     }
 
     public override string GetResPath()
