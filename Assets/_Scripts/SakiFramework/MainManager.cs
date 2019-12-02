@@ -6,6 +6,8 @@ using SakiFramework;
 //客户端入口 游戏的主循环
 public class MainManager : MonoBehaviour
 {
+    public bool LoadResources = true;
+
     private static MainManager instance;
 
     public static MainManager GetInstance()
@@ -24,7 +26,8 @@ public class MainManager : MonoBehaviour
 
         UIManager.GetInstance().Init();
         LevelManager.GetInstance().Init();
-        CoroutineManager.GetInstance().Init();
+        ResManager.GetInstance().Init(LoadResources ? ResLoadType.LoadByResources : ResLoadType.LoadByAssetsBundle);
+        //CoroutineManager.GetInstance().Init();
     }
 
     void Start()
