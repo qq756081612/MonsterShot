@@ -24,6 +24,7 @@ public class MainManager : MonoBehaviour
 
         UIManager.GetInstance().Init();
         LevelManager.GetInstance().Init();
+        CoroutineManager.GetInstance().Init();
     }
 
     void Start()
