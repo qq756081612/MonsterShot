@@ -22,7 +22,7 @@ namespace SakiFramework
 
         public T LoadSync<T>(string path) where T : Object
         {
-            return Resources.Load<T>("path");
+            return Resources.Load<T>(path);
         }
 
         public T LoadAsyne<T>(string path) where T : Object

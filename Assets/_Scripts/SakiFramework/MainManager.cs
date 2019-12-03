@@ -37,7 +37,7 @@ public class MainManager : MonoBehaviour
 
     IEnumerator Test()
     {
-        Debug.Log("Test");
+        //Debug.Log("Test");
 
         //while (true)
         //{

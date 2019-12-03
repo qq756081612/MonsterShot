@@ -31,11 +31,19 @@ namespace SakiFramework
             else if (nextScene.name == "Battle")
             {
                 UIManager.GetInstance().ShowView<MainView>("MainView");
+                BattleSceneTest();
             }
             else if (nextScene.name == "Loading")
             {
                 UIManager.GetInstance().ShowView<LoadingView>("LoadingView");
             }
+        }
+
+        public void BattleSceneTest()
+        {
+            //根据配置生成怪物 主角模型
+            GameObject player = ResManager.GetInstance().LoadSync<GameObject>("Model/Player/Player_001");
+            GameObject.Instantiate(player);
         }
 
         IEnumerator LoadingSceneAsync(string sceneName)
