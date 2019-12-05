@@ -9,16 +9,16 @@ namespace SakiFramework
     {
         private GameObject gameObject;
         private FSMSystem stateManager;
-        private Animator animator1;
+        private Animator animator;
 
-        public Animator Animator1 { get => animator1; private set => animator1 = value; }
+        public Animator Animator { get => animator; private set => animator = value; }
         public GameObject GameObject { get => gameObject; set => gameObject = value; }
         public FSMSystem StateManager { get => stateManager; set => stateManager = value; }
 
         public SceneObjBase(GameObject go)
         {
             GameObject = go;
-            Animator1 = go.GetComponent<Animator>();
+            Animator = go.GetComponent<Animator>();
 
             StateManager = new FSMSystem();
             InitState();

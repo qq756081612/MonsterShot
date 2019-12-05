@@ -46,7 +46,7 @@ namespace SakiFramework
                 }
                 else
                 {
-                    Debuger.LogError("Load ui failed, uiName : " + uiName);
+                    Debug.LogError("Load ui failed, uiName : " + uiName);
                     return;
                 }
             }
@@ -76,8 +76,6 @@ namespace SakiFramework
 
         public void HideAllView()
         {
-            //Debuger.LogError("???");
-
             foreach (var view in uiDic)
             {
                 view.Value.OnDestory();

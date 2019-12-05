@@ -27,7 +27,7 @@ namespace SakiFramework
         [MenuItem("SakiFramework/临时测试方法 %t", false, 999)]
         private static void TempTestFunc()
         {           
-            Debuger.LogError("666666666666");
+
         }
     }
 }

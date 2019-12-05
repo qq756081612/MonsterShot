@@ -42,12 +42,12 @@ namespace SakiFramework
         public void BattleSceneTest()
         {
             //根据配置生成怪物 主角模型
-            //GameObject player = ResManager.GetInstance().LoadSync<GameObject>("Model/Player/Player_001");
-            //GameObject.Instantiate(player);
+            GameObject player = ResManager.GetInstance().LoadSync<GameObject>("Model/Player/Player_001");
+            GameObject go = GameObject.Instantiate(player);
 
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            //GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-            SceneObjManager.GetInstance().InitMainPlayer(player);
+            SceneObjManager.GetInstance().InitMainPlayer(go);
         }
 
         IEnumerator LoadingSceneAsync(string sceneName)

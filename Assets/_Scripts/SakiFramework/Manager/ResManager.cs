@@ -35,7 +35,7 @@ namespace SakiFramework
             }
             else
             {
-                Debuger.LogError("LoadAsyne failed . Path : " + path);
+                Debug.LogError("LoadAsyne failed . Path : " + path);
                 return null;
             }
         }

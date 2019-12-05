@@ -75,13 +75,11 @@
     <Compile Include="Assets\_Scripts\SakiFramework\Core\SingertonMono.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\MainManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\CoroutineManager.cs" />
-    <Compile Include="Assets\_Scripts\SakiFramework\Manager\CoroutineManagerOther.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\EventManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\EventName.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\LevelManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\ResManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\SceneObjManager.cs" />
-    <Compile Include="Assets\_Scripts\SakiFramework\Manager\TaskManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\UIManager\UIItem.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\UIManager\UIManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\UIManager\UISystemDefine.cs" />

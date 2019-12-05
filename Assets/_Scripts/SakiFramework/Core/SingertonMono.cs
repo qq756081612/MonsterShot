@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Mono的单例类 暂未实现
-public class SingertonMono : MonoBehaviour
+public class SingertonMono<T> : MonoBehaviour where T : class, new() 
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        instance = new T();
     }
 
-    // Update is called once per frame
-    void Update()
+    private static T instance;
+
+    public static T Instance
     {
-        
+        get
+        {
+            return instance;
+        }
+    }
+
+    public static T GetInstance()
+    {
+        return instance;
     }
 }

@@ -26,7 +26,14 @@ namespace SakiFramework
 
             IsControl = false;
 
-            testAttack = go.transform.Find("TestAttack").gameObject;
+            //testAttack = go.transform.Find("TestAttack").gameObject;
+
+            //RuntimeAnimatorController controller = ResManager.GetInstance().LoadSync<RuntimeAnimatorController>("Animator/MainPlayer");
+            //Debug.LogError(controller.name);
+            
+            //Animator.runtimeAnimatorController = RuntimeAnimatorController.Instantiate(controller);
+
+            //Debug.LogError(Animator.runtimeAnimatorController);
         }
 
         protected override void InitState()
@@ -90,14 +97,14 @@ namespace SakiFramework
 
         public void Attack(bool enable)
         {
-            if (enable)
-            {
-                Tools.SetLocalPositionY(testAttack, 3.6f);
-            }
-            else
-            {
-                Tools.SetLocalPositionY(testAttack, -10);
-            }
+            //if (enable)
+            //{
+            //    Tools.SetLocalPositionY(testAttack, 3.6f);
+            //}
+            //else
+            //{
+            //    Tools.SetLocalPositionY(testAttack, -10);
+            //}
         }
     }
 
@@ -116,12 +123,12 @@ namespace SakiFramework
             //Debuger.Log("OnEnterState:" + TransitionEnum.StopControl.ToString());
             //Content.Animator1.SetBool(TransitionEnum.StopControl.ToString(),true);
             //Content.SetAnimationBool(TransitionEnum.StopControl.ToString(), true);
-            Content.Animator1.SetBool(TransitionEnum.StopControl.ToString(), true);
+            Content.Animator.SetBool(TransitionEnum.StopControl.ToString(), true);
         }
 
         public override void OnLeaveState()
         {
-            Content.Animator1.SetBool(TransitionEnum.StopControl.ToString(), false);
+            Content.Animator.SetBool(TransitionEnum.StopControl.ToString(), false);
         }
 
         public override void Reason()
@@ -158,12 +165,12 @@ namespace SakiFramework
         {
             //Debug.LogError(TransitionEnum.StartControl.ToString());
             //Debug.LogError(Content.Animator1);
-            Content.Animator1.SetBool(TransitionEnum.StartControl.ToString(), true);
+            Content.Animator.SetBool(TransitionEnum.StartControl.ToString(), true);
         }
 
         public override void OnLeaveState()
         {
-            Content.Animator1.SetBool(TransitionEnum.StartControl.ToString(), false);
+            Content.Animator.SetBool(TransitionEnum.StartControl.ToString(), false);
         }
 
         public override void Reason()
@@ -189,12 +196,12 @@ namespace SakiFramework
 
         public override void OnEnterState()
         {
-            Content.Animator1.SetBool(TransitionEnum.FindTarget.ToString(), true);
+            Content.Animator.SetBool(TransitionEnum.FindTarget.ToString(), true);
         }
 
         public override void OnLeaveState()
         {
-            Content.Animator1.SetBool(TransitionEnum.FindTarget.ToString(), false);
+            Content.Animator.SetBool(TransitionEnum.FindTarget.ToString(), false);
             Content.Attack(false);
         }
 
@@ -208,7 +215,7 @@ namespace SakiFramework
 
         public override void Act()
         {
-            if (Content.Animator1.GetCurrentAnimatorClipInfo(0)[0].clip.name == "FlyFireBreathAttack-Middle")
+            if (Content.Animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "FlyFireBreathAttack-Middle")
             {
                 Content.Attack(true);
             }

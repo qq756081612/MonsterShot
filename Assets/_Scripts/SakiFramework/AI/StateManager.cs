@@ -181,11 +181,11 @@ namespace SakiFramework
 
             currentState.OnLeaveState();
 
-            Debug.LogError("上一个状态已经离开 " + currentState.StateName.ToString());
+            //Debug.LogError("上一个状态已经离开 " + currentState.StateName.ToString());
 
             currentState = stateDic[nextState];
 
-            Debug.LogError("下一个状态即将进入 " + currentState.StateName.ToString());
+            //Debug.LogError("下一个状态即将进入 " + currentState.StateName.ToString());
 
             currentState.OnEnterState();
         }
