@@ -66,6 +66,10 @@
     <Compile Include="Assets\_Scripts\GameLogic\UI\LoadingView.cs" />
     <Compile Include="Assets\_Scripts\GameLogic\UI\MainView.cs" />
     <Compile Include="Assets\_Scripts\GameLogic\UI\SettingView.cs" />
+    <Compile Include="Assets\_Scripts\SakiFramework\AI\MainPlayer.cs" />
+    <Compile Include="Assets\_Scripts\SakiFramework\AI\SceneObj.cs" />
+    <Compile Include="Assets\_Scripts\SakiFramework\AI\StateEnum.cs" />
+    <Compile Include="Assets\_Scripts\SakiFramework\AI\StateManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\ApplicationFacade.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Core\Singerton.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Core\SingertonMono.cs" />
@@ -74,8 +78,9 @@
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\CoroutineManagerOther.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\EventManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\EventName.cs" />
+    <Compile Include="Assets\_Scripts\SakiFramework\Manager\LevelManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\ResManager.cs" />
-    <Compile Include="Assets\_Scripts\SakiFramework\Manager\SceneManager.cs" />
+    <Compile Include="Assets\_Scripts\SakiFramework\Manager\SceneObjManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Manager\TaskManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\UIManager\UIItem.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\UIManager\UIManager.cs" />
@@ -85,7 +90,6 @@
     <Compile Include="Assets\_Scripts\SakiFramework\Utiliy\EventDispatcher.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Utiliy\TimerManager.cs" />
     <Compile Include="Assets\_Scripts\SakiFramework\Utiliy\Tools.cs" />
-    <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\CharacterControls.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerTouch.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerUI.cs" />
@@ -163,6 +167,7 @@
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+    <Compile Include="Assets\PSScale.cs" />
     <Compile Include="Assets\PureMVC\Core\Controller.cs" />
     <Compile Include="Assets\PureMVC\Core\Model.cs" />
     <Compile Include="Assets\PureMVC\Core\View.cs" />

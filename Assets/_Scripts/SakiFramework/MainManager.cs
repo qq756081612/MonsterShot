@@ -27,6 +27,7 @@ public class MainManager : MonoBehaviour
         UIManager.GetInstance().Init();
         LevelManager.GetInstance().Init();
         ResManager.GetInstance().Init(LoadResources ? ResLoadType.LoadByResources : ResLoadType.LoadByAssetsBundle);
+        SceneObjManager.GetInstance().Init();
         //CoroutineManager.GetInstance().Init();
     }
 
@@ -60,5 +61,6 @@ public class MainManager : MonoBehaviour
     void Update()
     {
         //Debug.Log("Update");
+        SceneObjManager.GetInstance().Update();
     }
 }
