@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Mono的单例类 暂未实现
-public class SingertonMono<T> : MonoBehaviour where T : class, new() 
+public class SingertonMono<T> : MonoBehaviour where T : MonoBehaviour, new() 
 {
     private void Awake()
     {
-        instance = new T();
+        if (instance != null)
+        {
+            instance = new T();
+        }
+        else
+        {
+            Debug.LogError("场景中已存在单例类：" + typeof(T).ToString());
+        }
     }
 
     private static T instance;
@@ -16,6 +23,11 @@ public class SingertonMono<T> : MonoBehaviour where T : class, new()
     {
         get
         {
+            if (instance == null)
+            {
+                Debug.LogError("Get SingertonMono Faild" + typeof(T).ToString());
+            }
+
             return instance;
         }
     }

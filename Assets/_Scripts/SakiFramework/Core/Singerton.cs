@@ -21,6 +21,12 @@ namespace SakiFramework
                         if (instance == null)
                         {
                             instance = new T();
+
+                            if (instance is MonoBehaviour)
+                            {
+                                Debug.LogError("MonoBehaviour 要继承SingertonMono实现单例");
+                                return null;
+                            }
                         }
                     }
                 }
