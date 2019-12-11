@@ -13,7 +13,7 @@ namespace SakiFramework
         private Transform root_pop;
 
         private Dictionary<string, UIViewBase> uiDic;                       //已经加载到内存中的UI
-        private Stack<UIViewBase> uiStack;
+        private Stack<string> uiStack;
 
         public UIManager()
         {
@@ -23,7 +23,7 @@ namespace SakiFramework
             //root_pop = root.Find("Pop");
 
             uiDic = new Dictionary<string, UIViewBase>();
-            uiStack = new Stack<UIViewBase>();
+            uiStack = new Stack<string>();
         }
 
         public void Init()
@@ -53,22 +53,25 @@ namespace SakiFramework
 
             if (uiStack.Count != 0)
             {
-                UIViewBase prePanel = uiStack.Peek();
+                string prePanelName = uiStack.Peek();
+                UIViewBase prePanel = uiDic[prePanelName];
                 prePanel.OnDisable();
             }
 
-            uiStack.Push(curPanel);
+            uiStack.Push(uiName);
             curPanel.OnShow();
         }
 
         public void HideView()
         {
-            UIViewBase curPanel = uiStack.Pop();
+            string curPanelName = uiStack.Pop();
+            UIViewBase curPanel = uiDic[curPanelName];
             curPanel.OnHide();
 
             if (uiStack.Count > 0)
             {
-                UIViewBase prePanel = uiStack.Peek();
+                string prePanelName = uiStack.Peek();
+                UIViewBase prePanel = uiDic[prePanelName];
 
                 prePanel.OnEnable();
             }

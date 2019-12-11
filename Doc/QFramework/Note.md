@@ -22,3 +22,6 @@ GUIUtility.systemCopyBuffer = fileName;
 
 ###7. PureMVC官网文档地址
 http://puremvc.org/docs/PureMVC_IIBP_Chinese.pdf
+
+###8.List的使用
+list扩容默认是翻倍扩容的，容易造成内存不必要的开销，故已经list长度的时候可以使用构造函数传入list的长度，或者使用Capacity属性指定。

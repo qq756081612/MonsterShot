@@ -7,15 +7,17 @@ namespace SakiFramework
 {
     public class PackageFramework
     {
-        [MenuItem("SakiFramework/一键打包框架 %e", false,1)]
+        [MenuItem("SakiFramework/打开项目文件夹 %e", false,1)]
         private static void PackageSakiFramework()
         {
-            string filePath = "Assets/SakiFramework";
-            string fileName = string.Format("SakiFramework_{0}.unitypacakge", DateTime.Now.ToString("yyyy_MM_dd_hh_mm"));
+            //string filePath = "Assets/SakiFramework";
+            //string fileName = string.Format("SakiFramework_{0}.unitypacakge", DateTime.Now.ToString("yyyy_MM_dd_hh_mm"));
 
-            PackageAssetsOpenFilePath(filePath, fileName);
+            //PackageAssetsOpenFilePath(filePath, fileName);
 
-            EditorUtility.DisplayDialog("操作成功", "一键打包框架完成","确定");
+            //EditorUtility.DisplayDialog("操作成功", "一键打包框架完成","确定");
+
+            Application.OpenURL("file:///" + Application.dataPath + "\\../");
         }
 
         public static void PackageAssetsOpenFilePath(string filePath, string fileName)
