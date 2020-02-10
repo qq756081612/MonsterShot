@@ -9,11 +9,8 @@ public class ButtonInputUI : MonoBehaviour {
 	public Text getButtonTimeText;
 	public Text getButtonUpText;
 
-	void Update(){
-
-
-
-
+	void Update()
+	{
 		if (ETCInput.GetButton("Button")){
 			getButtonText.text="YES";
 			getButtonTimeText.text = ETCInput.GetButtonValue( "Button").ToString();
